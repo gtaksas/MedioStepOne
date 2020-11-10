@@ -68,9 +68,10 @@ const styles = StyleSheet.create({
         borderColor: "gray",
         borderWidth: 1,
         borderRadius: 5,
-        width: '45%',
+        width: 160,
         padding: 10,
         marginRight: 10,
+        marginLeft: 1,
     },
     appButtonContainer: {
         elevation: 8,
