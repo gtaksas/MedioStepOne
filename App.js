@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TextInput, Button, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 
 export default function App() {
     const [name, setName] = useState('');
@@ -19,25 +18,20 @@ export default function App() {
                 source={require('./medio_logo.png')}
             />
             <Text style={styles.textLine}>Üdv, {name}!</Text>
-            <StatusBar style="auto" />
             <View style={styles.inputContainer}>
                 <TextInput
                     style={styles.input}
                     placeholder='Név'
                     onChangeText={(value) => setText(value)}
                 />
-                <View>
-                    <AppButton
-                        title="Küldés"
-                        onPress={() => setName(text)}
-                    />
-                </View>
+                <AppButton
+                    title="Küldés"
+                    onPress={() => setName(text)}
+                />
             </View>
         </View>
     );
 }
-
-const { width, height } = Dimensions.get("screen");
 
 const styles = StyleSheet.create({
     container: {
